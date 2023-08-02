@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <form enctype="multipart/form-data">
+        <input name="title" type="text" placeholder="title" required>
+        <input name="image" type="file" required>
+        <input name="price" type="number" placeholder="price in dollar" required>
+        <textarea name="description" cols="40" rows="5" placeholder="description" required></textarea>
+        <input name="category" type="text" placeholder="category" required>
+        <input name="brand" type="text" placeholder="brand" required>
+        <div>
+          <label for="checkbox">on sale</label>
+          <input name="onSale" type="checkbox" id="checkbox">
+        </div>
+        <input name="discount" type="number" placeholder="discount">
+        <button type="button">submit</button>
+      </form>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
+</html>
