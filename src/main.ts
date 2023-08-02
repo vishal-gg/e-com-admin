@@ -45,7 +45,7 @@ button?.addEventListener("click", async (e) => {
     }
     button.textContent = 'SUBMITTING...'
     button.disabled = true;
-    const {data} = await axios.post('https://e-commerce-serverside.vercel.app', formData)
+    const {data} = await axios.post('https://e-commerce-serverside.vercel.app/upload', formData)
     alert(data.message)
     console.log(data)
     form?.reset()
