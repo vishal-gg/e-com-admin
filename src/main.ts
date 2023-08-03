@@ -5,6 +5,8 @@ const form = document.querySelector("form");
 const button = form?.querySelector('button');
 const onSaleInput = document.querySelector('input[name="onSale"]') as HTMLInputElement;
 const discountInput = document.querySelector('input[name="discount"]') as HTMLInputElement;
+const popularInput = document.querySelector('input[name="popular"]') as HTMLInputElement;
+const colorInput = document.querySelector('input[name="color"]') as HTMLInputElement;
 
 onSaleInput?.addEventListener('keydown', (e) => {
   if(e.key === 'Enter'){
@@ -23,8 +25,16 @@ button?.addEventListener("click", async (e) => {
       formData.set("onSale", String(onSaleInput.checked)); // set boolean value as string to formData
     };
 
+      // Handle popular
+    if(popularInput.checked){
+      formData.set("popular", String(popularInput.checked))
+    };
+    
     // Handle discount
     if (discountInput.value === "") formData.delete("discount");
+
+    // Handle color
+    if (colorInput.value === "") formData.delete("color");
 
     // Check if any field in filterData is empty
     // this checks could be avoided if I were using submit event but i don't accidental form submission.
